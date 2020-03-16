@@ -1,8 +1,8 @@
 [core]
-	editor = vim
-	excludesfile = ~/.gitignore
+  editor = vim
+  excludesfile = ~/.gitignore
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 [color]
   ui = true
 [color "branch"]
