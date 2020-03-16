@@ -19,3 +19,8 @@ My vimrc is largely adopted from
 with a few of my own aliases added. I've commented out the plugins I use, but I should
 figure out a way to script the install of those too.
 
+## inputrc
+
+Adds vim key bindings to GNU readline, so that Python REPL
+supports VIM keybindings.
+
