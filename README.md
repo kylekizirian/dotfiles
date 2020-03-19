@@ -12,12 +12,12 @@ I described my changes
 My git settings. My config aliases were mostly adopted from
 [Git Workflows Appendix A](http://documentup.com/skwp/git-workflows-book#appendix-a---the-gitconfig)
 
-## vimrc
+## my_configs.vim
 
-My vimrc is largely adopted from
-[Amir Salihefendic's basic.vim](https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim)
-with a few of my own aliases added. I've commented out the plugins I use, but I should
-figure out a way to script the install of those too.
+I utilize 
+[Amir Salihefendic's vim configuration](https://github.com/amix/vimrc)
+with a few of my own aliases added. This file goes into ~/.vim_runtime
+after following the install instructions in the linked repo.
 
 ## inputrc
 
