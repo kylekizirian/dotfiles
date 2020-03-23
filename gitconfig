@@ -1,11 +1,6 @@
-[user]
-  name = kylekizirian
-  email = kyle.kizirian@gmail.com
 [core]
   editor = vim
   excludesfile = ~/.gitignore
-[credential]
-  helper = osxkeychain
 [color]
   ui = true
 [color "branch"]
