@@ -1,6 +1,11 @@
+[user]
+  name = kylekizirian
+  email = kyle.kizirian@gmail.com
 [core]
   editor = vim
   excludesfile = ~/.gitignore
+[credential]
+  helper = osxkeychain
 [color]
   ui = true
 [color "branch"]
@@ -22,49 +27,21 @@
   b = branch -v                     # branch (verbose)
 
   # commit
-  c = commit -m                     # commit with message
-  ca = commit -am                   # commit all with message
-  ci = commit                       # commit
-  amend = commit --amend            # ammend your last commit
-  ammend = commit --amend           # ammend your last commit
+  c = commit --verbose              # commit with message
 
   # checkout
   co = checkout                     # checkout
   nb = checkout -b                  # create and switch to a new branch (mnemonic: "git new branch branchname...")
 
-  # cherry-pick
-  cp = cherry-pick -x               # grab a change from a branch
-
   # diff
   d = diff                          # diff unstaged changes
   dc = diff --cached                # diff staged changes
-  last = diff HEAD^                 # diff last committed change
-
-  # log
-  l = log --graph --date=short
-  changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
-  short = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
-  changelog = log --pretty=format:\" * %s\"
-  shortnocolor = log --pretty=format:\"%h %cr %cn %s\"
 
   # pull
   pl = pull                         # pull
 
   # push
   ps = push                         # push
-
-  # rebase
-  rc = rebase --continue            # continue rebase
-  rs = rebase --skip                # skip rebase
-
-  # remote
-  r = remote -v                     # show remotes (verbose)
-
-  # reset
-  unstage = reset HEAD              # remove files from index (tracking)
-  uncommit = reset --soft HEAD^     # go back before last commit, with files in uncommitted state
-  filelog = log -u                  # show changes to a file
-  mt = mergetool                    # fire up the merge tool
 
   # stash
   ss = stash                        # stash changes
@@ -77,5 +54,25 @@
   st = status                       # status
   stat = status                     # status
 
-  # tag
-  t = tag -n                        # show tags with <n> lines of each tag message
+
+  # Fancy logging.
+  #   h = head
+  #   hp = head with patch
+  #   r = recent commits, only current branch
+  #   ra = recent commits, all reachable refs
+  #   l = all commits, only current branch
+  #   la = all commits, all reachable refs
+  #   b = all branches
+  #   bs = all branches, sorted by last commit date
+  head = !git r -1
+  h = !git head
+  hp = "!. ~/.githelpers && show_git_head"
+  r = !GIT_NO_PAGER=1 git l -30
+  ra = !git r --all
+  l = "!. ~/.githelpers && pretty_git_log"
+  la = !git l --all
+  b = "!. ~/.githelpers && pretty_git_branch"
+  bs = "!. ~/.githelpers && pretty_git_branch_sorted"
+
+[merge]
+  tool = vimdiff
