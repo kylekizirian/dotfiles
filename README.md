@@ -11,13 +11,13 @@ I described my changes
 
 My git settings. My config aliases were mostly adopted from
 [Git Workflows Appendix A](http://documentup.com/skwp/git-workflows-book#appendix-a---the-gitconfig)
+and [Gary Bernhardt's gitconfig](https://github.com/garybernhardt/dotfiles).
 
-## my_configs.vim
+## vimrc
 
-I utilize 
-[Amir Salihefendic's vim configuration](https://github.com/amix/vimrc)
-with a few of my own aliases added. This file goes into ~/.vim_runtime
-after following the install instructions in the linked repo.
+Largely based off of [Amir Salihefendic's vimrc](https://github.com/amix/vimrc)
+and [Gary Bernhardt's vimrc](https://github.com/garybernhardt/dotfiles) with
+my own mappings and plugins.
 
 ## inputrc
 
