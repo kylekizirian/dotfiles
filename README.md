@@ -28,6 +28,5 @@ vim +PluginInstall +qall
 
 ## inputrc
 
-Adds vim key bindings to GNU readline, so that Python REPL
-supports VIM keybindings.
+Adds vim keybindings to GNU readline for terminal and Python REPL.
 
