@@ -19,6 +19,13 @@ Largely based off of [Amir Salihefendic's vimrc](https://github.com/amix/vimrc)
 and [Gary Bernhardt's vimrc](https://github.com/garybernhardt/dotfiles) with
 my own mappings and plugins.
 
+To install plugins
+
+```bash
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
+```
+
 ## inputrc
 
 Adds vim key bindings to GNU readline, so that Python REPL
