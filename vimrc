@@ -124,6 +124,9 @@ if has("gui_running")
     set guioptions -=m
     set guioptions -=T
 
+    " copy to clipboard automatically
+    set guioptions +=a
+
     if has("gui_gtk2")
         set guifont=Inconsolata\ 12
     elseif has("gui_macvim")
