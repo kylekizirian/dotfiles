@@ -14,12 +14,12 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
-Plugin 'w0rp/ale'
 
 " Visuals
 Plugin 'joshdick/onedark.vim'
 Plugin 'junegunn/goyo.vim'
 Plugin 'itchyny/lightline.vim'
+Plugin 'junegunn/limelight.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
