@@ -118,6 +118,10 @@ set incsearch
 " Add a bit extra margin to the left
 set foldcolumn=1
 
+" Hide toolbar and menu in Gvim
+set guioptions -=m
+set guioptions -=T
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
