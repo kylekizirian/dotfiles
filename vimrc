@@ -120,11 +120,11 @@ set foldcolumn=1
 
 " Set gvim fonts
 if has("gui_running")
-    " Hide toolbar and menu in Gvim
-    set guioptions -=m
-    set guioptions -=T
+    " Disables all of the default GUI options including displaying
+    " the menubar, the toolbar, and scrollbars
+    set guioptions=
 
-    " copy to clipboard automatically
+    " copy to clipboard automatically from gvim
     set guioptions +=a
 
     if has("gui_gtk2")
