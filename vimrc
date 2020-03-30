@@ -118,9 +118,20 @@ set incsearch
 " Add a bit extra margin to the left
 set foldcolumn=1
 
-" Hide toolbar and menu in Gvim
-set guioptions -=m
-set guioptions -=T
+" Set gvim fonts
+if has("gui_running")
+    " Hide toolbar and menu in Gvim
+    set guioptions -=m
+    set guioptions -=T
+
+    if has("gui_gtk2")
+        set guifont=Inconsolata\ 12
+    elseif has("gui_macvim")
+        set guifont=Menlo\ Regular:h14
+    elseif has("gui_win32")
+        set guifont=Consolas:h11:cANSI
+    endif
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
