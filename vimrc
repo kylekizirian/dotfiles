@@ -132,6 +132,9 @@ if has("gui_running")
     elseif has("gui_macvim")
         set guifont=Menlo\ Regular:h14
     elseif has("gui_win32")
+        " opens gvim full screen
+        " https://vi.stackexchange.com/a/1938
+        set GUIEnter * simalt ~x
         set guifont=Consolas:h11:cANSI
     endif
 endif
