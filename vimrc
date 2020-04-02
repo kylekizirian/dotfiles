@@ -259,6 +259,9 @@ inoremap kj <Esc>
 " Bind semi-colon to colon
 nnoremap ; :
 
+" last opened file with ,,
+nnoremap <leader><leader> <c-^>
+
 " Delete trailing white space on save, useful for some filetypes ;)
 fun! CleanExtraSpaces()
   let save_cursor = getpos(".")
