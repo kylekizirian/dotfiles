@@ -12,8 +12,13 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Nice file finding
 Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
+
+" All kinds of awesome git integration
+Plugin 'tpope/vim-fugitive'
+
+" Commenting superpowers
+Plugin "preservim/nerdcommenter"
 
 " Visuals
 Plugin 'joshdick/onedark.vim'
