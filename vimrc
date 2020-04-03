@@ -134,7 +134,7 @@ if has("gui_running")
     elseif has("gui_win32")
         " opens gvim full screen
         " https://vi.stackexchange.com/a/1938
-        set GUIEnter * simalt ~x
+        autocmd GUIEnter * simalt ~x
         set guifont=Consolas:h11:cANSI
     endif
 endif
