@@ -323,7 +323,7 @@ map <leader>j :CtrlP<cr>
 map <C-b> :CtrlPBuffer<cr>
 
 let g:ctrlp_max_height = 20
-let g:ctrlp_custom_ignore = '^\.DS_Store\|^\.git\'
+let g:ctrlp_custom_ignore = 'venv\|^\.DS_Store\|^\.git\'
 
 """"""""""""""""""""""""""""""
 " => NERD Tree
