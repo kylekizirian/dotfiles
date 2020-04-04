@@ -18,7 +18,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 
 " Commenting superpowers
-Plugin "preservim/nerdcommenter"
+Plugin 'preservim/nerdcommenter'
 
 " Visuals
 Plugin 'joshdick/onedark.vim'
