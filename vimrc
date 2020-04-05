@@ -264,6 +264,9 @@ nnoremap <leader><leader> <c-^>
 " copy to clibpard with ,y
 map <leader>y "*y
 
+" clear the search buffer after hitting return
+nnoremap <CR> :noh<cr>
+
 " Delete trailing white space on save, useful for some filetypes ;)
 fun! CleanExtraSpaces()
   let save_cursor = getpos(".")
