@@ -329,6 +329,11 @@ let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = 'venv\|^\.DS_Store\|^\.git\'
 
 """"""""""""""""""""""""""""""
+" => NERDCommenter
+""""""""""""""""""""""""""""""
+let NERDSpaceDelims=1
+
+""""""""""""""""""""""""""""""
 " => NERD Tree
 """"""""""""""""""""""""""""""
 " NERDTree toggle with CTRL+n
