@@ -123,6 +123,11 @@ set incsearch
 " Add a bit extra margin to the left
 set foldcolumn=1
 
+" use cursorline in normal mode but not in insert mode
+set cursorline
+autocmd InsertEnter * set nocul
+autocmd InsertLeave * set cul
+
 " Set gvim fonts
 if has("gui_running")
     " Disables all of the default GUI options including displaying
