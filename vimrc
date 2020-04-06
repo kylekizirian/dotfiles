@@ -20,6 +20,9 @@ Plugin 'tpope/vim-fugitive'
 " Commenting superpowers
 Plugin 'preservim/nerdcommenter'
 
+" tmux integration
+Plugin 'benmills/vimux'
+
 " Visuals
 Plugin 'joshdick/onedark.vim'
 Plugin 'junegunn/goyo.vim'
@@ -55,6 +58,7 @@ filetype plugin indent on    " required
 "    -> Spell checking
 "    -> Misc
 "    -> Helper functions
+"    -> Filetype specifics
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -348,4 +352,17 @@ let g:NERDTreeWinPos = "right"
 let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let g:NERDTreeWinSize=35
+
+""""""""""""""""""""""""""""""
+" => vimux
+""""""""""""""""""""""""""""""
+map <Leader>vp :VimuxPromptCommand<CR>
+map <Leader>vl :VimuxRunLastCommand<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Filetype specifics
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" set groovy syntax highlighting for Jenkinsfile
+au BufNewFile,BufRead Jenkinsfile setf groovy
 
