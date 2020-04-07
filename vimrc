@@ -264,9 +264,6 @@ nnoremap k gk
 inoremap jk <Esc>
 inoremap kj <Esc>
 
-" Bind semi-colon to colon
-nnoremap ; :
-
 " last opened file with ,,
 nnoremap <leader><leader> <c-^>
 
