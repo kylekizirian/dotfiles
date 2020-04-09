@@ -17,6 +17,9 @@ Plugin 'scrooloose/nerdtree'
 " All kinds of awesome git integration
 Plugin 'tpope/vim-fugitive'
 
+" Mostly use this for ]q and [q in the quickfix list
+Plugin 'tpope/vim-unimpaired'
+
 " Commenting superpowers
 Plugin 'preservim/nerdcommenter'
 
