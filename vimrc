@@ -356,6 +356,6 @@ let g:NERDTreeWinSize=35
 " set groovy syntax highlighting for Jenkinsfile
 au BufNewFile,BufRead Jenkinsfile setf groovy
 
-au BufNewFile,BufRead *.py  setlocal ts=4 sw=4 expandtab autoindent textwidth=79 fileformat=unix
+au BufNewFile,BufRead *.py  setlocal ts=4 sw=4 expandtab autoindent textwidth=79 fileformat=unix foldmethod=indent foldlevel=99
 au BufNewFile,BufRead *.js, *.html, *.css setlocal ts=2 set sw=2
 
