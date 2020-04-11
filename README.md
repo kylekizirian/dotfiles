@@ -1,5 +1,18 @@
 # dotfiles
 
+```bash
+ln -s ./gitconfig ~/.gitconfig
+ln -s ./gitignore ~/.gitignore
+ln -s ./githelpers ~/.githelpers
+ln -s ./vimrc ~/.vimrc
+ln -s ./tmux.conf ~/.tmux.conf
+ln -s ./pdbrc ~/.pdbrc
+ln -s ./inputrc ~/.inputrc
+
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
+```
+
 ## pdbrc
 
 My pdb aliases, tweaked only slightly from
