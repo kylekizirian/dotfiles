@@ -72,6 +72,9 @@ set history=500
 filetype plugin on
 filetype indent on
 
+" Disable error bells
+set vb t_vb=
+
 " Set to auto read when a file is changed from the outside
 set autoread
 au FocusGained,BufEnter * checktime
@@ -257,12 +260,6 @@ inoremap <right> <nop>
 " Better up/down navigation
 nnoremap j gj
 nnoremap k gk
-
-" Hit esc easily. My only reservation with this is that I always hit
-" this when in vi mode in the terminal or in Jupyter Lab and it does
-" not work. Curse you muscle memory!
-inoremap jk <Esc>
-inoremap kj <Esc>
 
 " last opened file with ,,
 nnoremap <leader><leader> <c-^>
