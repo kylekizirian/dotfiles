@@ -71,3 +71,6 @@
 
 [merge]
   tool = vimdiff
+[user]
+	name = Kyle Kizirian
+	email = kyle.kizirian@gmail.com
