@@ -357,6 +357,13 @@ let g:NERDTreeWinSize=35
 " set groovy syntax highlighting for Jenkinsfile
 au BufNewFile,BufRead Jenkinsfile setf groovy
 
-au BufNewFile,BufRead *.py  setlocal ts=4 sw=4 expandtab autoindent textwidth=79 fileformat=unix foldmethod=indent foldlevel=99
+" Sets tab and shift widths to 4 and line lengths to 79 per pep8
+" Sets fileformat to unix to fix CRLF line endings
+au BufNewFile,BufRead *.py  setlocal ts=4 sw=4 expandtab autoindent textwidth=79 fileformat=unix
+" Fold based on indent level. foldcolumn defaults to everything being unfolded
+" when the file opens. foldcolumn=0 does not display indent level on the 
+" left-hand side.
+au BufNewFile,BufRead *.py  setlocal foldmethod=indent foldcolumn=0 foldlevel=99
+
 au BufNewFile,BufRead *.js, *.html, *.css setlocal ts=2 set sw=2
 
