@@ -17,6 +17,10 @@ Plugin 'scrooloose/nerdtree'
 " All kinds of awesome git integration
 Plugin 'tpope/vim-fugitive'
 
+" navigate vim and tmux splits with ctrl hjkl
+Plugin 'christoomey/vim-tmux-navigator'
+
+
 " Mostly use this for ]q and [q in the quickfix list
 Plugin 'tpope/vim-unimpaired'
 
