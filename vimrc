@@ -20,6 +20,8 @@ Plugin 'tpope/vim-fugitive'
 " navigate vim and tmux splits with ctrl hjkl
 Plugin 'christoomey/vim-tmux-navigator'
 
+" grep plugin
+Plugin 'mileszs/ack.vim'
 
 " Mostly use this for ]q and [q in the quickfix list
 Plugin 'tpope/vim-unimpaired'
@@ -350,6 +352,13 @@ let g:NERDTreeWinPos = "right"
 let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let g:NERDTreeWinSize=35
+
+""""""""""""""""""""""""""""""
+" => ack.vim
+""""""""""""""""""""""""""""""
+if executable("rg")
+    let g:ackprg = 'rg --vimgrep --no-heading'
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Filetype specifics
