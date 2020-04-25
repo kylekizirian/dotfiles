@@ -30,7 +30,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'preservim/nerdcommenter'
 
 " Visuals
-Plugin 'joshdick/onedark.vim'
+Plugin 'junegunn/seoul256.vim'
 Plugin 'junegunn/goyo.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'junegunn/limelight.vim'
@@ -190,7 +190,8 @@ endif
 
 " Enable syntax highlighting
 syntax enable 
-colorscheme onedark
+let g:seoul256_background = 233
+colo seoul256
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
