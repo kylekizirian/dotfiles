@@ -112,6 +112,6 @@ export KEYTIMEOUT=1
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.fzf.helpers.zsh ] && source ~/.fzf.helpers.zsh
 
-# use CTRL-f to fuzzy find files
-bindkey '^F' fzf-file-widget
+# use CTRL-p to fuzzy find files
+bindkey '^P' fzf-file-widget
 
