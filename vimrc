@@ -10,8 +10,11 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" fzf.vim
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plugin 'junegunn/fzf.vim'
+
 " Nice file finding
-Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 
 " All kinds of awesome git integration
@@ -325,18 +328,6 @@ inoremap <expr> <tab> InsertTabWrapper()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-""""""""""""""""""""""""""""""
-" => CTRL-P
-""""""""""""""""""""""""""""""
-let g:ctrlp_working_path_mode = 0
-
-let g:ctrlp_map = '<C-f>'
-map <leader>j :CtrlP<cr>
-map <C-b> :CtrlPBuffer<cr>
-
-let g:ctrlp_max_height = 20
-let g:ctrlp_custom_ignore = 'venv\|^\.DS_Store\|^\.git\'
 
 """"""""""""""""""""""""""""""
 " => NERDCommenter
