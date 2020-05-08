@@ -93,6 +93,7 @@ export EDITOR='vim'
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias python=python3
+alias vim=nvim
 
 [ -f ~/.zsh-extras.zsh ] && source ~/.zsh-extras.zsh
 
