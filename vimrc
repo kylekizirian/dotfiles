@@ -330,6 +330,30 @@ inoremap <expr> <tab> InsertTabWrapper()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""
+" => fzf.vim
+""""""""""""""""""""""""""""""
+nnoremap <silent> <C-p> :Files<CR>
+nnoremap <silent> <leader>. :Rg 
+nnoremap <silent> K :call SearchWordWithRg()<CR>
+nnoremap <silent> K :call SearchVisualSelectionWithRg()<CR>
+
+function! SearchWordWithRg()
+    execute 'Rg' expand('<cword>')
+endfunction
+
+function! SearchVisualSelectionWithRg() range
+    let old_reg = getreg('"')
+    let old_regtype = getregtype('"')
+    let old_clipboard = &clipboard
+    set clipboard&
+    normal! ""gvy
+    let selection = getreg('"')
+    call setreg('"', old_reg, old_regtype)
+    let &clipboard = old_clipboard
+    execute 'Rg' selection
+endfunction
+
+""""""""""""""""""""""""""""""
 " => NERDCommenter
 """"""""""""""""""""""""""""""
 let NERDSpaceDelims=1
