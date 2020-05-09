@@ -333,9 +333,9 @@ inoremap <expr> <tab> InsertTabWrapper()
 " => fzf.vim
 """"""""""""""""""""""""""""""
 nnoremap <silent> <C-p> :Files<CR>
-nnoremap <silent> <leader>. :Rg 
-nnoremap <silent> K :call SearchWordWithRg()<CR>
-nnoremap <silent> K :call SearchVisualSelectionWithRg()<CR>
+nnoremap <silent> <leader>f :Rg 
+nnoremap <silent> <leader>d :call SearchWordWithRg()<CR>
+vnoremap <silent> <leader>d :call SearchVisualSelectionWithRg()<CR>
 
 function! SearchWordWithRg()
     execute 'Rg' expand('<cword>')
