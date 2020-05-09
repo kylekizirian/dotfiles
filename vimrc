@@ -330,6 +330,16 @@ inoremap <expr> <tab> InsertTabWrapper()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""
+" => fugitive
+""""""""""""""""""""""""""""""
+nnoremap <silent> <leader>gs :G<cr>
+nnoremap <silent> <leader>gb :Git blame<cr>
+nnoremap <silent> <leader>gl :Gclog<cr>
+nnoremap <silent> <leader>go :0Gclog<cr>
+nnoremap <silent> <leader>gwr :Gwrite<cr>
+nnoremap <silent> <leader>gco :Git commit<cr>
+
+""""""""""""""""""""""""""""""
 " => fzf.vim
 """"""""""""""""""""""""""""""
 nnoremap <silent> <C-p> :Files<CR>
