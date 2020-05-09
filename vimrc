@@ -346,6 +346,8 @@ nnoremap <silent> <C-p> :Files<CR>
 nnoremap <silent> <leader>f :Rg 
 nnoremap <silent> <leader>d :call SearchWordWithRg()<CR>
 vnoremap <silent> <leader>d :call SearchVisualSelectionWithRg()<CR>
+nnoremap <silent> <leader>gfl :Commits<CR>
+nnoremap <silent> <leader>gfo :BCommits<CR>
 
 function! SearchWordWithRg()
     execute 'Rg' expand('<cword>')
