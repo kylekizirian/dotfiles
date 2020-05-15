@@ -13,6 +13,10 @@ inoremap <leader>- <Esc>:sp<CR><C-w><C-w>:term<CR>
 
 
 if has('nvim')
+
+  au TermEnter * setlocal scrolloff=0
+  au TermLeave * setlocal scrolloff=10
+
   augroup vimrc_term
     autocmd!
     autocmd WinEnter term://* nohlsearch
