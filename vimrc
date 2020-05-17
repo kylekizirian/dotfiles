@@ -366,11 +366,6 @@ function! SearchVisualSelectionWithRg() range
 endfunction
 
 """"""""""""""""""""""""""""""
-" => NERDCommenter
-""""""""""""""""""""""""""""""
-let NERDSpaceDelims=1
-
-""""""""""""""""""""""""""""""
 " => NERD Tree
 """"""""""""""""""""""""""""""
 " NERDTree toggle with CTRL+n
@@ -396,7 +391,7 @@ au BufNewFile,BufRead Jenkinsfile setf groovy
 
 " Sets tab and shift widths to 4 and line lengths to 79 per pep8
 " Sets fileformat to unix to fix CRLF line endings
-au BufNewFile,BufRead *.py  setlocal ts=4 sw=4 expandtab autoindent textwidth=79 fileformat=unix
+au BufNewFile,BufRead *.py  setlocal ts=4 sw=4 expandtab autoindent textwidth=75 fileformat=unix
 " Fold based on indent level. foldcolumn defaults to everything being unfolded
 " when the file opens. foldcolumn=0 does not display indent level on the 
 " left-hand side.
