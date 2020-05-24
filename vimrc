@@ -275,7 +275,7 @@ nnoremap k gk
 nnoremap <leader><leader> <c-^>
 
 " copy to clibpard with ,y
-nnoremap <leader>y "*y
+nnoremap <leader>y "+y
 
 " clear the search buffer after hitting return
 nnoremap <CR> :noh<cr>
@@ -343,7 +343,7 @@ nnoremap <silent> <leader>gco :Git commit<cr>
 " => fzf.vim
 """"""""""""""""""""""""""""""
 nnoremap <silent> <C-p> :Files<CR>
-nnoremap <silent> <leader>f :Rg 
+nnoremap <silent> <leader>rg :Rg 
 nnoremap <silent> <leader>d :call SearchWordWithRg()<CR>
 vnoremap <silent> <leader>d :call SearchVisualSelectionWithRg()<CR>
 nnoremap <silent> <leader>gfl :Commits<CR>
@@ -364,6 +364,16 @@ function! SearchVisualSelectionWithRg() range
     let &clipboard = old_clipboard
     execute 'Rg' selection
 endfunction
+
+function! RipgrepFzf(query, fullscreen)
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+endfunction
+
+command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
 """"""""""""""""""""""""""""""
 " => NERD Tree
