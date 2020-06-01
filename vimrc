@@ -275,7 +275,7 @@ nnoremap k gk
 nnoremap <leader><leader> <c-^>
 
 " copy to clibpard with ,y
-nnoremap <leader>y "+y
+nnoremap <leader>y "*y
 
 " clear the search buffer after hitting return
 nnoremap <CR> :noh<cr>
