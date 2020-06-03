@@ -14,9 +14,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 
-" Nice file finding
-Plugin 'scrooloose/nerdtree'
-
 " All kinds of awesome git integration
 Plugin 'tpope/vim-fugitive'
 
@@ -276,6 +273,7 @@ nnoremap <leader><leader> <c-^>
 
 " copy to clibpard with ,y
 nnoremap <leader>y "*y
+vnoremap <leader>y "*y
 
 " clear the search buffer after hitting return
 nnoremap <CR> :noh<cr>
@@ -374,17 +372,6 @@ function! RipgrepFzf(query, fullscreen)
 endfunction
 
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
-
-""""""""""""""""""""""""""""""
-" => NERD Tree
-""""""""""""""""""""""""""""""
-" NERDTree toggle with CTRL+n
-map <C-n> :NERDTreeToggle<CR>s
-
-let g:NERDTreeWinPos = "right"
-let NERDTreeShowHidden=0
-let NERDTreeIgnore = ['\.pyc$', '__pycache__']
-let g:NERDTreeWinSize=35
 
 """"""""""""""""""""""""""""""
 " => ack.vim
