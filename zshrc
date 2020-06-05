@@ -112,6 +112,9 @@ export KEYTIMEOUT=1
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.fzf.helpers.zsh ] && source ~/.fzf.helpers.zsh
 
+export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 # use CTRL-p to fuzzy find files
 bindkey '^P' fzf-file-widget
 
