@@ -341,6 +341,7 @@ nnoremap <silent> <leader>gco :Git commit<cr>
 " => fzf.vim
 """"""""""""""""""""""""""""""
 nnoremap <silent> <C-p> :Files<CR>
+nnoremap <silent> <leader>l :Lines<CR>
 nnoremap <silent> <leader>f :Rg 
 nnoremap <silent> <leader>d :call SearchWordWithRg()<CR>
 vnoremap <silent> <leader>d :call SearchVisualSelectionWithRg()<CR>
