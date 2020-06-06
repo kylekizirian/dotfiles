@@ -347,6 +347,7 @@ nnoremap <silent> <leader>d :call SearchWordWithRg()<CR>
 vnoremap <silent> <leader>d :call SearchVisualSelectionWithRg()<CR>
 nnoremap <silent> <leader>gfl :Commits<CR>
 nnoremap <silent> <leader>gfo :BCommits<CR>
+inoremap <expr> <c-x><c-f> fzf#vim#complete#path('rg --files')
 
 function! SearchWordWithRg()
     execute 'Rg' expand('<cword>')
