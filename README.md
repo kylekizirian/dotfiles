@@ -1,13 +1,7 @@
 # dotfiles
 
 ```bash
-ln -s ./gitconfig ~/.gitconfig
-ln -s ./gitignore ~/.gitignore
-ln -s ./githelpers ~/.githelpers
-ln -s ./vimrc ~/.vimrc
-ln -s ./tmux.conf ~/.tmux.conf
-ln -s ./pdbrc ~/.pdbrc
-ln -s ./inputrc ~/.inputrc
+cp -r . ~
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
@@ -28,7 +22,7 @@ and [Gary Bernhardt's gitconfig](https://github.com/garybernhardt/dotfiles).
 
 ## vimrc
 
-Largely based off of [Amir Salihefendic's vimrc](https://github.com/amix/vimrc)
+Some ideas taken from [Amir Salihefendic's vimrc](https://github.com/amix/vimrc)
 and [Gary Bernhardt's vimrc](https://github.com/garybernhardt/dotfiles) with
 my own mappings and plugins.
 
