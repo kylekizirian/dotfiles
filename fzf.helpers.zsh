@@ -83,3 +83,22 @@ bind-git-helper() {
 bind-git-helper f b t r h
 unset -f bind-git-helper
 
+# change directories from:
+# https://github.com/junegunn/fzf/wiki/Examples#changing-directory
+
+# fd - cd to selected directory
+fcd() {
+  local dir
+  dir=$(find ${1:-.} -path '*/\.*' -prune \
+                  -o -type d -print 2> /dev/null | fzf +m) &&
+  cd "$dir"
+}
+
+# fdf - cd into the directory of the selected file
+fdf() {
+   local file
+   local dir
+   file=$(fzf +m -q "$1") && dir=$(dirname "$file") && cd "$dir"
+}
+
+
