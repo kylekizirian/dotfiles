@@ -2,7 +2,7 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath=&runtimepath
 source ~/.vimrc
 
-" Quickly create a new terminal in a horizontal split
+" Quickly create a new terminal in a vertical split
 tnoremap <leader>\| <C-\><C-n>:vsp<CR><C-w><C-w>:term<CR>
 noremap <leader>\| :vsp<CR><C-w><C-w>:term<CR>
 inoremap <leader>\| <Esc>:vsp<CR><C-w><C-w>:term<CR>
