@@ -222,6 +222,10 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+" Fix indenting on C switch cases
+" https://stackoverflow.com/questions/3444696/how-to-disable-vims-indentation-of-switch-case
+set cinoptions=l1
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
