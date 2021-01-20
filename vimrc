@@ -400,7 +400,7 @@ au BufNewFile,BufRead *.py  setlocal ts=4 sw=4 expandtab autoindent textwidth=75
 " left-hand side.
 au BufNewFile,BufRead *.py  setlocal foldmethod=indent foldcolumn=0 foldlevel=99
 
-au BufNewFile,BufRead *.js, *.html, *.css setlocal ts=2 set sw=2
+au BufNewFile,BufRead *.js setlocal ts=2 sw=2
 
 au BufNewFile,BufRead *.md setlocal textwidth=72
 au BufNewFile,BufRead *.txt setlocal textwidth=72
