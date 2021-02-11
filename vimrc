@@ -34,6 +34,7 @@ Plugin 'junegunn/seoul256.vim'
 Plugin 'junegunn/goyo.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'junegunn/limelight.vim'
+Plugin 'junegunn/rainbow_parentheses.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -404,4 +405,9 @@ au BufNewFile,BufRead *.js setlocal ts=2 sw=2
 
 au BufNewFile,BufRead *.md setlocal textwidth=72
 au BufNewFile,BufRead *.txt setlocal textwidth=72
+
+augroup rainbow_lisp
+  autocmd!
+  autocmd FileType lisp,clojure,scheme RainbowParentheses
+augroup END
 
