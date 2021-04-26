@@ -26,6 +26,9 @@ Plugin 'mileszs/ack.vim'
 " Mostly use this for ]q and [q in the quickfix list
 Plugin 'tpope/vim-unimpaired'
 
+" Go plugin
+Plugin 'fatih/vim-go'
+
 " Commenting superpowers
 Plugin 'preservim/nerdcommenter'
 
@@ -333,6 +336,19 @@ inoremap <expr> <tab> InsertTabWrapper()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""
+" => go test
+""""""""""""""""""""""""""""""
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_generate_tags = 1
+nnoremap <silent> <leader>gt :GoTest<cr>
+
+""""""""""""""""""""""""""""""
 " => fugitive
 """"""""""""""""""""""""""""""
 nnoremap <silent> <leader>gs :G<cr>
@@ -408,6 +424,6 @@ au BufNewFile,BufRead *.txt setlocal textwidth=72
 
 augroup rainbow_lisp
   autocmd!
-  autocmd FileType lisp,clojure,scheme RainbowParentheses
+  autocmd FileType lisp,clojure,scheme,python RainbowParentheses
 augroup END
 
